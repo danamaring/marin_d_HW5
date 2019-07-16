@@ -19,9 +19,46 @@ body {
 }
 
 .logo {
-	width: 100px;
-	margin-left: auto;
-	margin-right: auto;
+	width: 600px;
+	order: -1;
+	cursor: pointer;
+}
+
+#mainHeader {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.nav {
+	flex: 0 1 100px;
+	cursor: pointer;
+}
+
+#burgerCon {
+	margin-bottom: 20px;
+	position: fixed;
+	top: 85px;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.8);
+/*	this should be off by default and toggled on with JS*/
+	display: none;
+}
+
+.show-mobile-nav {
+	display: block !important;
+}
+
+#burgerCon a {
+	text-decoration: none;
+	color: #8ea86e
+}
+
+#burgerCon li {
+	padding: 20px;
+	border-top: thin solid #efefef;
+	text-align: center;
+	top: 60px;
 }
 
 @media screen and (min-width: 600px) {
@@ -42,6 +79,7 @@ body {
 		order: -1;
 		flex: 0 1 220px;
 		margin-left: 10px;
+		margin-right: auto;
 	}
 
 	#products {
